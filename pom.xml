@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.mediasoup</groupId>
+    <artifactId>mediasoup-java</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <modules>
+        <module>mediasoup-client-java</module>
+        <module>mediasoup-server</module>
+    </modules>
+
+    <properties>
+        <version.spring-boot>2.2.4.RELEASE</version.spring-boot>
+        <version.junit>4.12</version.junit>
+        <version.junit.jupiter>5.6.0</version.junit.jupiter>
+        <version.junit.platform>1.6.0</version.junit.platform>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- ************** -->
+        <!-- Build settings -->
+        <!-- ************** -->
+
+        <!-- Cross plugins settings -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+        <!-- maven-compiler-plugin -->
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+
+        <!-- Options to override the compiler arguments directly on the compiler
+            arument line to separate between what the IDE understands as the source level
+            and what the Maven compiler actually use. -->
+        <maven.compiler.argument.target>${maven.compiler.target}</maven.compiler.argument.target>
+        <maven.compiler.argument.source>${maven.compiler.source}</maven.compiler.argument.source>
+
+        <!-- maven-enforcer-plugin -->
+        <maven.min.version>3.0.3</maven.min.version>
+        <jdk.min.version>${maven.compiler.source}</jdk.min.version>
+        <jdk.max.version>${maven.compiler.source}</jdk.max.version>
+    </properties>
+
+</project>
